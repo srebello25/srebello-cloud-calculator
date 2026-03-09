@@ -9,7 +9,7 @@
     }
 
     try {
-        const response = await fetch("http://13.40.188.144:5000/api/calc", {
+        const response = await fetch("https://api.eco-shop.shop/api/calc", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
