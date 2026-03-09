@@ -1,33 +1,50 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>srebello Cloud Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srebello Cloud Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body class="calculator-page">
 
-<body class="light-page">
+<div class="calculator-wrapper">
+    <div class="calculator-card">
+        <p class="small-label">Cloud Project</p>
+        <h1>Srebello Cloud Calculator</h1>
+        <p class="subtitle">Frontend + API + AWS EC2 + NGINX + HTTPS</p>
 
-<h1>Srebello Cloud Calculator</h1>
+        <div class="input-group">
+            <label for="a">First Number</label>
+            <input type="number" id="a" placeholder="Enter first number">
+        </div>
 
-<input type="number" id="a" placeholder="Number A">
+        <div class="input-group">
+            <label for="op">Operation</label>
+            <select id="op">
+                <option value="add">Addition (+)</option>
+                <option value="sub">Subtraction (-)</option>
+                <option value="mul">Multiplication (×)</option>
+                <option value="div">Division (÷)</option>
+            </select>
+        </div>
 
-<select id="op">
-    <option value="add">+</option>
-    <option value="sub">-</option>
-    <option value="mul">*</option>
-    <option value="div">/</option>
-</select>
+        <div class="input-group">
+            <label for="b">Second Number</label>
+            <input type="number" id="b" placeholder="Enter second number">
+        </div>
 
-<input type="number" id="b" placeholder="Number B">
+        <button onclick="calculate()">Calculate</button>
 
-<br><br>
+        <div class="result-box">
+            <span>Result</span>
+            <p id="result">Waiting for calculation...</p>
+        </div>
 
-<button onclick="calculate()">Calculate</button>
-
-<p id="result">Result will appear here</p>
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+</div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

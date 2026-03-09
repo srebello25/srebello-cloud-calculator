@@ -1,51 +1,184 @@
-﻿body{
-    background:black;
-    color:#00ff99;
-    font-family:Arial;
-    text-align:center;
-    margin:0;
+﻿* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-.center-box{
-    margin-top:150px;
+body {
+    min-height: 100vh;
 }
 
-.logo{
-    font-size:70px;
-    text-shadow:0 0 20px #00ff99,0 0 40px #00ff99;
+/* HOME PAGE */
+body.home-page {
+    background: linear-gradient(135deg, #0f172a, #111827, #1e293b);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
 }
 
-.subtitle{
-    font-size:24px;
-    margin-top:10px;
+.home-container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
 }
 
-.tagline{
-    margin-bottom:40px;
+.hero-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 50px 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
 
-.project-btn{
-    border:2px solid #00ff99;
-    padding:15px 30px;
-    text-decoration:none;
-    color:#00ff99;
-    border-radius:10px;
-    font-size:20px;
+.hero-card h1 {
+    font-size: 3rem;
+    margin-bottom: 12px;
 }
 
-.project-btn:hover{
-    background:#00ff99;
-    color:black;
+.hero-card .role {
+    font-size: 1.2rem;
+    color: #93c5fd;
+    margin-bottom: 12px;
 }
 
-.light-page{
-    background:#f5f5f5;
-    color:black;
+.hero-card .desc {
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+    color: #d1d5db;
 }
 
-input,select,button{
-    padding:10px;
-    font-size:18px;
-    margin:10px;
-    border-radius:8px;
+.project-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.project-button:hover {
+    background: #1d4ed8;
+}
+
+/* CALCULATOR PAGE */
+body.calculator-page {
+    background: linear-gradient(135deg, #e0f2fe, #eef2ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.calculator-wrapper {
+    width: 100%;
+    max-width: 520px;
+}
+
+.calculator-card {
+    background: white;
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.small-label {
+    color: #2563eb;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.calculator-card h1 {
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.calculator-card .subtitle {
+    color: #6b7280;
+    margin-bottom: 28px;
+    line-height: 1.5;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #374151;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #2563eb;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.result-box {
+    margin-top: 24px;
+    padding: 18px;
+    border-radius: 16px;
+    background: #f3f4f6;
+}
+
+.result-box span {
+    display: block;
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 6px;
+}
+
+.result-box p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #111827;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
 }
